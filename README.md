@@ -1,4 +1,4 @@
-# CUPT-AnalogReadSerial
+# CUPT-Seismograph
 
 本程序是在CUPT比赛的“地震仪”题目中，用于通过串口读取数据的。  
 题目内容如下：  
@@ -13,3 +13,8 @@
 AnalogRead文件夹内是需要编译进Arduino执行的模拟输入和串口通讯程序，使用Arduino IDE打开它并编译上传至Arduino即可。  
 arduino.py需使用python3运行，启动后会监听串口。Arduino接入的串口因设备而异，类Unix系统下请通过查看`/dev/`目录确定Arduino是哪个设备，例如`/dev/tty.usbmodem1421`；Windows下一般为`COM4`，`COM6`等，请自行确认，并修改代码。9600是波特率，无需修改。只要正确接收到了信号，便会实时对数据绘图。  
 ![image](img.jpg)
+
+## 使用方法
+
+将`AnalogRead.ino`通过Arduino IDE编译上传至设备，然后通过USB将设备连接到电脑。  
+在电脑上查看设备挂载的位置，并对应修改`arduino.py`中`serial.Serial`的参数。执行`arduino.py`即可实时绘图。

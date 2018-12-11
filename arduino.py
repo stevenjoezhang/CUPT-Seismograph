@@ -1,4 +1,5 @@
-# -*- coding=utf-8 -*-
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
 import serial
 import re
 import psutil as p
@@ -48,7 +49,7 @@ def onTimer(ax):
 	ax.figure.canvas.draw()
 	string = str(tmp) + " " + str(time.time() - 1526030000);
 	print(string)
-	with open("data.txt", "a") as f: # 如果filename不存在会自动创建， 'w'表示写数据，写之前会清空文件中的原有数据！
+	with open("data.txt", "a") as f: # 如果filename不存在会自动创建，'w'表示写数据，写之前会清空文件中的原有数据！
 		f.write(string + "\n")
 
 timer = fig.canvas.new_timer(interval = 10)
