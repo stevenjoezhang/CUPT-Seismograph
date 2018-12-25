@@ -1,6 +1,6 @@
-# CUPT-Seismograph
+# CUPT Seismograph
 
-本程序是在CUPT比赛的“地震仪”题目中，用于通过串口读取数据的。  
+本程序是在CUPT比赛的『地震仪』题目中，用于通过串口读取数据的。  
 题目内容如下：  
 > **Invent Yourself**  
 > Construct a simple seismograph that amplifies a local disturbance by mechanical, optical or electrical methods. Determine the typical response curve of your device and investigate the parameters of the damping constant. What is the maximum amplification that you can achieve?  
@@ -16,5 +16,20 @@ arduino.py需使用python3运行，启动后会监听串口。Arduino接入的�
 
 ## 使用方法
 
+```bash
+# Clone this repository
+git clone https://github.com/stevenjoezhang/CUPT-Seismograph.git
+# Go into the repository
+cd CUPT-Seismograph
+# Install dependencies
+pip install -r requirements.txt
+```
 将`AnalogRead.ino`通过Arduino IDE编译上传至设备，然后通过USB将设备连接到电脑。  
 在电脑上查看设备挂载的位置，并对应修改`arduino.py`中`serial.Serial`的参数。执行`arduino.py`即可实时绘图。
+
+## Credits
+* [Mimi](https://zhangshuqiao.org) Developer of this project.
+
+## License
+Released under the GNU General Public License v3  
+http://www.gnu.org/licenses/gpl-3.0.html
