@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-#-*- coding:utf-8 -*-
+#!/usr/bin/env python3
+
 import serial
 import re
-import psutil as p
+import time
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
-import time
 
 ser = serial.Serial("/dev/tty.usbmodem1421", 9600) # Replace tty.usbmodem1411 with your serial port
 print(ser.isOpen())

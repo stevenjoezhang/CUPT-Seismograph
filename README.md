@@ -16,13 +16,15 @@ arduino.py需使用python3运行，启动后会监听串口。Arduino接入的�
 
 ## 使用方法
 
+需要Python3和pip3。
+
 ```bash
 # Clone this repository
 git clone https://github.com/stevenjoezhang/CUPT-Seismograph.git
 # Go into the repository
 cd CUPT-Seismograph
 # Install dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 将`AnalogRead.ino`通过Arduino IDE编译上传至设备，然后通过USB将设备连接到电脑。  
 在电脑上查看设备挂载的位置，并对应修改`arduino.py`中`serial.Serial`的参数。执行`arduino.py`即可实时绘图。
